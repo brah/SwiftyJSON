@@ -229,8 +229,8 @@ class BaseTests: XCTestCase {
     func testExistance() {
         let dictionary = ["number":1111]
         let json = JSON(dictionary)
-        XCTAssertFalse(json["unspecifiedValue"].exists())
-        XCTAssertTrue(json["number"].exists())
+        XCTAssertFalse(json["unspecifiedValue"].isExist())
+        XCTAssertTrue(json["number"].isExist())
     }
     
     func testErrorHandle() {
